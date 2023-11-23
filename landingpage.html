@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="landingpage.css">
+    <title>Landing Page</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="navbar">
+            <img src="learn/background" alt="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Tree</a></li>
+                <li><a href="#">Flower</a></li>
+                <li><a href="#">SunSet</a></li>
+                <li><a href="#">Help</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Finally a proper front</h1>
+            <p>I am slowly making progress.<br> It was hard at first and still hard, but we will make it</p>
+            <div>
+                <button class="button"><span></span>Watch</button>
+                <button class="button"><span></span>Read</button>
+            </div>
+            <div class="header">
+                <input type="text" id="ipt">
+                <button class="btn" id="bttn" onclick="play()">start</button>
+                <span id="result"></span>
+        </div>
+    </div>
+    <script>
+      
+        function play() {
+        let y = document.getElementById('ipt').value;
+        let target= Math.floor(Math.random()*10);
+       // let target;
+             
+       let message
+        do {
+            if (y < target) {
+                message= 'wrong, try again' ;
+            } else if (y > target) {
+                message='too high, go again';
+            }
+            target=prompt(message+"guess number:")
+        } while (y !=target)
+        alert("number is :" +target);
+    }
+
+        
+           </script>
+</body>
+</html>
